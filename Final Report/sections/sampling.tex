@@ -1,0 +1,148 @@
+\section*{SAMPLING THEORY}
+\addcontentsline{toc}{section}{Sampling Theory}
+\fancyhead[R]{SAMPLING THEORY}
+
+\subsection*{Sampling Unit}
+An element or a group of elements on which observations can be
+taken is called a sampling unit.\\
+The objective of the survey helps in determining the definition of
+sampling unit.
+
+\subsection*{Sampling Frame}
+List of all the units of the population to be surveyed constitutes
+the sampling frame.\\
+All the sampling units in the sampling frame have identification
+particulars.\\
+For example, all the students in a particular university listed along
+with their roll numbers constitutes the sampling frame.
+
+\subsection*{Simple Random Sampling}
+Simple random sampling (SRS) is a method of selection of a
+sample comprising of n number of sampling units from the
+population having N number of units such that every sampling
+unit has an equal chance of being chosen.
+
+\subsection*{Simple Random Sampling Without Replacement}
+\subsubsection*{SRSWOR}
+The sampling units are chosen without replacement in the sense
+that the units once chosen are not placed back in the population.\\
+SRSWOR is a method of selection of n units out of the N units one
+by one such that at any stage of selection, any one of the
+remaining units have the same chance of being selected, i.e. $\frac{1}{N}$.
+
+\subsection*{Simple Random Sampling With Replacement}
+\subsubsection*{SRSWR}
+The sampling units are chosen with replacement in the sense that
+the chosen units are placed back in the population.\\
+SRSWR is a method of selection of n units out of the N units one by
+one such that at each stage of selection, each unit has an equal
+chance of being selected, i.e., $\frac{1}{N}$.
+
+\subsection*{Sample Mean}
+Population mean is generally measured by arithmetic mean (or
+weighted arithmetic mean).\\
+Let us consider the sample arithmetic mean $\bar{y}\ =\ \frac{1}{n}\sum_{i=1}^{n}y_i$ as an estimator of population mean $\bar{Y}\ =\ \frac{1}{N}\sum_{i=1}^{N}Y_i$\\
+Estimate population mean $\bar{Y}\ =\ \frac{1}{N}\sum_{i=1}^{N}Y_i$ by sample mean $\bar{y}\ =\ \frac{1}{n}\sum_{i=1}^{n}y_i$\\
+$\bar{y}$ is an unbiased estimator of $\bar{Y}$ under SRSWR and SRSwOR cases. 
+\[ E(\bar{y})\ =\ \frac{1}{N}\sum_{i=1}^{N}y_i\ =\ \bar{Y}\]
+
+\subsection*{Sample Varience}
+Variance of sample mean under SRSWOR
+\[ V(\bar{y_{WOR}})\ =\ E(\bar{y}\ -\ \bar{Y})^2\ =\ \frac{N\ -\ n}{Nn}S^2 \]
+Variance of sample mean under SRSWR
+\[ V(\bar{y_{WR}})\ =\ E(\bar{y}\ -\ \bar{Y})^2\ =\ \frac{N\ -\ 1}{Nn}S^2 \]
+
+\subsection*{Standard Deviation of Sample Mean}
+\[ \bar{y}\ =\ +\sqrt{Var(\bar{Y_{WOR}})}\ or\ +\sqrt{Var(\bar{Y_{WR}})} \]
+
+\subsection*{Sampling for Proportions and Percentages}
+In many situations, the characteristic under study on which the
+observations are collected are qualitative in nature.
+\subsubsection*{Sampling Procedure}
+Follow the same sampling procedures used in case of \underline{quantitative} characteristics for drawing a sample for \underline{qualitative} characteristic.\\
+SRSWOR and SRSWR procedures for drawing the samples remains
+the same for qualitative and quantitative characteristics.
+
+\subsubsection*{Mean}
+Estimate population proportion by sample mean
+\[ \bar{y}\ =\ p\ =\ \sum_{i=1}^{n}\frac{y_i}{n} \]
+\subsubsection*{Variance}
+The variance of p under SRSWOR and SRSWR are
+\[ Var_{WOR}(p)\ =\ \frac{N-n}{N-1}\frac{PQ}{n} \]
+\[ Var_{WR}(p)\ =\ \frac{PQ}{n} \]
+respectively.
+
+\subsection*{Stratified Sampling}
+Important objective: Obtain an estimator of a population parameter
+which can take care of all salient features of the population.\\
+If the population is heterogeneous with respect to the
+characteristic under study, then the sampling procedure used is
+stratified sampling.
+
+\subsection*{Bootstrap Methodology}
+We are interested in finding the statistical properties of the
+estimators such as the expressions for measures of accuracy.\\
+Deriving the variance or standard error of these statistics is difficult.\\
+Asymptotic theory can be used to derive them but they are not
+available for small samples.\\
+A modern alternative to the traditional approach is the
+bootstrapping method.\\
+Bootstrap is a powerful, computer‐based resampling method for
+statistical inference without relying on too many assumption.\\
+Bootstrap is a resampling method.\\
+Simple random sampling with replacement (SRSWR) is used.\\
+Samples are drawn independently by SRSWR from an existing
+sample data of the same sample size n, and drawing inferences
+from these resampled data.
+
+\subsection*{Simple linear regression model}
+Consider a simple linear regression model
+\[ y\ =\ \beta_0\ +\ \beta_1X\ +\ \epsilon \]
+y : Dependent or study variable\\
+X : Independent or explanatory variable.\\
+$\beta_0$ : Intercept term\\
+$\beta_1$ : Slope parameter.\\
+$\epsilon$ : Unobservable error component.It accounts for the failure of data to lie on the straight line and represents the difference between the true and observed realization of y.
+\subsubsection*{OLSE}
+The ordinary least squares estimates (OLSE) of $\beta_0$ and $\beta_1$ are denoted as $b_0$ and $b_1$ respectively.\\
+$b_0\ =\ \bar{y}\ -\ b_1\bar{x}$\\
+$b_1\ =\ \frac{s_{xy}}{s_{xx}}$\\
+where\\
+$s_{xy}\ =\ \sum_{i=1}^{n}(x_i\ -\ \bar{x})(y_i\ -\ \bar{y})$\\
+$s_{xy}\ =\ \sum_{i=1}^{n}(x_i\ -\ \bar{x})^2$
+
+\subsection*{Maximum Likelihood Property}
+Assume $\epsilon_i`s$(i = 1,2,...n) are independent and identically distributed following a normal distribution N(0,$\sigma^2$).\\
+The maximum likelihood estimates of the parameters $\beta_0$, $\beta_1$ and $\sigma^2$ of the linear regression model are
+\begin{enumerate}
+    \item $\bar{b_0}\ =\ \bar{y}\ -\ \bar{b_1}\bar{x}$ : same as OLSE
+    \item $\bar{b_1}\ =\ \frac{s_{xy}}{s_{xx}}$ : same as OLSE
+    \item $\bar{s^2}\ =\ \frac{\sum_{i=1}^{n}(y_i\ -\ \bar{b_0}\ -\ \bar{b_1}\bar{x}})$ : Different from OLSE
+\end{enumerate}
+
+\subsection*{Multiple linear regression model}
+When we consider the regression modeling between the
+dependent and more than one independent variables, then the
+linear model is termed as the multiple linear regression model.\\
+Let y denotes the dependent (or study) variable that is linearly
+related to k independent (or explanatory) variables $X_1,X_2,...,X_k$ through the parameters $\beta_1,\beta_2,...,\beta_k$ and we write
+\[ y\ =\ X_1\beta_1 \ +\ X_2\beta_2 \ +\ ,,, \ +\ X_k\beta_k\  +\ \epsilon \]
+This is called as the multiple linear regression model.
+\begin{itemize}
+    \item The parameters $\beta_1,\beta_2,...,\beta_k$ are the regression coefficients associated with $X_1,X_2,...,X_k$ respectively and
+    \item $\epsilon$ is the random error component reflecting the difference between the observed and fitted linear relationship.
+\end{itemize}
+
+\subsection*{Principle of OLSE}
+The ordinary least squares (OLS) estimator of $\beta$ is
+\[ b\ =\ (X`X)^{-1}X`y. \]
+The estimator of $\sigma^2$ is
+\[ \hat{\sigma^2}\ =\ \frac{(y-Xb)`(y-Xb)}{n-k} \]
+
+\subsection*{Maximum Likelihood Estimation}
+In the model $y\ =\ X\beta\ +\ \epsilon$, it is assumed that the errors are normally and independently distributed with constant variance i.e., $\epsilon\ ~\ N(0,\sigma^2I) $.\\
+The likelihood function is the joint density of $\epsilon_1,\epsilon_2,...,\epsilon_n$.\\
+Maximizing the log likelihood\\
+The maximun likelihood estimators (mle) of $\beta$ and $\sigma^2$ are obtained by equating the first order derivatives of $ln\ L(\beta,\sigma^2)$ w.r.t $\beta$ and $\sigma^2$ to zero.\\
+\textbf{Note:} OLSE and mle of $\beta$ are the same. So mle of $\beta$ is also an unbaised estimator of $\beta$ also
+mle of $\sigma^2$ is biased estimator of $\sigma^2$.

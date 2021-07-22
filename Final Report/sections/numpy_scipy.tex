@@ -1,0 +1,87 @@
+\section*{NUMPY}
+\addcontentsline{toc}{subsection}{NUMPY}
+\fancyhead[R]{NUMPY}
+
+NumPy, which stands for Numerical Python, is a library consisting of multidimensional array objects and a collection of routines for processing those arrays. Using NumPy, mathematical and logical operations on arrays can be performed.
+
+\subsection*{Why is Numpy so important?}
+There are several reasons why NumPy stands out while evaluating complex mathematical equations on matrices:
+\begin{itemize}
+    \item NumPy integrates C/C++ and Fortran codes in Python which execute faster as compared to Python.
+    \item Python list is a heterogeneous collection of elements whereas a Numpy array is a homogeneous collection of elements stored in contiguous memory locations which results in faster access and execution.
+    \item Performing simple arithmetic operations is way easier using Numpy array as compared to python lists.
+    \item Parallel processing of sub-tasks of a huge task resulting in superfast execution with large data arrays.
+\end{itemize}
+
+\subsection*{Some Important Operations on Numpy arrays include:}
+\begin{itemize}
+    \item generating arrays with random numbers
+    \item generating evenly spaced ndarrays
+    \item reshaping of Numpy arrays
+    \item flattening of a Numpy array
+    \item transpose of a Numpy array
+    \item expanding and squeezing of a numpy array
+    \item slicing and negative slicing of Numpy arrays
+    \item stacking and concatenating ndarrays
+    \item broadcasting in Numpy arrays.
+\end{itemize}
+NumPy package also contains a Matrix library \textbf{numpy.matlib}. This module has functions that return matrices instead of ndarray objects.\\
+It also contains \textbf{numpy.linalg} module that provides all the functionality required for linear algebra.
+
+
+
+
+\section*{SciPy}
+\addcontentsline{toc}{subsection}{SciPy}
+\fancyhead[R]{SciPy}
+
+SciPy, a scientific library for Python is an open source, BSD{-}licensed library for mathematics, science and engineering. The SciPy library depends on NumPy, which provides convenient and fast N{-}dimensional array manipulation. The main reason for building the SciPy library is that, it should work with NumPy arrays. It provides many user[-]friendly and efficient numerical practices such as routines for numerical integration and optimization.\\
+By default, all the NumPy functions have been available through the SciPy namespace. There is no need to import the NumPy functions explicitly, when SciPy is imported.
+
+\subsection*{Some SciPy Packages}
+\subsubsection*{SciPy{-}Cluster}
+K{-}means clustering is a method for finding clusters and cluster centers in a set of unlabelled data. Intuitively, we might think of a cluster as {-} comprising of a group of data points, whose inter{-}point distances are small compared with the distances to points outside of the cluster. Given an initial set of K centers, the K{-}means algorithm iterates the following two steps
+\begin{itemize}
+    \item For each center, the subset of training points (its cluster) that is closer to it is identified than any other center.
+    \item The mean of each feature for the data points in each cluster are computed, and this mean vector becomes the new center for that cluster.
+\end{itemize}
+These two steps are iterated until the centers no longer move or the assignments no longer change. Then, a new point x can be assigned to the cluster of the closest prototype. The SciPy library provides a good implementation of the K{-}Means algorithm through the cluster package.
+
+\subsubsection*{SciPy{-}FFTpack}
+Fourier Transformation is computed on a time domain signal to check its behavior in the frequency domain. Fourier transformation finds its application in disciplines such as signal and noise processing, image processing, audio signal processing, etc. SciPy offers the fftpack module, which lets the user compute fast Fourier transforms.
+
+\subsubsection*{SciPy{-}Ndimage}
+The SciPy ndimage submodule is dedicated to image processing. Here, ndimage means an n{-}dimensional image.\\
+Some of the most common tasks in image processing are as follows
+\begin{itemize}
+    \item Input/Output, displaying images
+    \item Basic manipulations {-} Cropping, flipping, rotating, etc.
+    \item Image filtering {-} De{-}noising, sharpening, etc.
+    \item Image segmentation {-} Labeling pixels corresponding to different objects
+    \item Classification.
+\end{itemize}
+
+\subsubsection*{SciPy{-}Optimize}
+The \textbf{scipy.optimize} package provides several commonly used optimization algorithms. This module contains the following aspects
+\begin{itemize}
+    \item Unconstrained and constrained minimization of multivariate scalar functions (minimize()) using a variety of algorithms
+    \item Global (brute{-}force) optimization routines (e.g., anneal(), basinhopping())
+    \item Least{-}squares minimization (leastsq()) and curve fitting (curve\_fit()) algorithms
+    \item Scalar univariate functions minimizers (minimize\_scalar()) and root finders (newton())
+\end{itemize}
+
+
+
+\section*{Pandas}
+\addcontentsline{toc}{subsection}{Pandas}
+\fancyhead[R]{Pandas}
+
+Pandas is a Python library used for working with data sets.\\
+It has functions for analyzing, cleaning, exploring, and manipulating data.\\
+Pandas allows us to analyze big data and make conclusions based on statistical theories.\\
+Pandas can clean messy data sets, and make them readable and relevant.
+\subsubsection*{Pandas Series}
+A Pandas Series is like a column in a table.\\
+It is a one-dimensional array holding data of any type.
+\subsubsection*{Pandas DataFrame}
+A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.

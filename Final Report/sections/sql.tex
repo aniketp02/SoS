@@ -1,0 +1,241 @@
+\section*{SQL}
+\addcontentsline{toc}{section}{SQL}
+\fancyhead[R]{SQL}
+
+ \textbf{SQL} stands for \textbf{Structured Query Language}. It is a database computer language designed for the retrieval and management of data in a relational database. SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987.
+ 
+ 
+ \subsection*{{Why learn SQL?}}
+ \addcontentsline{toc}{subsection}{Why learn SQL?}
+ SQL is the standard language for Relational Database System. All the Relational Database Management Systems (RDMS) like MySQL, MS Access, Oracle, Sybase, Informix, Postgres and SQL Server use SQL as their standard database language.\\
+ SQL is widely popular because it offers the following advantages {-}
+ \begin{itemize}
+     \item Allows users to access data in the relational database management systems
+     \item Allows users to define the data in a database and manipulate that data
+     \item Allows to embed within other languages using SQL modules, libraries \& pre{-}compilers.
+ \end{itemize}
+ 
+ 
+ \subsection*{{What is RDBMS?}}
+ \addcontentsline{toc}{subsection}{What is RDBMS?}
+ RDBMS stands for Relational Database Management System.\\
+ RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.\\
+ The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.
+ 
+ 
+ \subsection*{{SQL Syntax}}
+ \addcontentsline{toc}{subsection}{SQL Syntax}
+ Most of the actions you need to perform on a database are done with SQL statements.\\
+ The following SQL statement selects all the records in a table:
+ \begin{verbatim}
+     SELECT * FROM table_name;
+ \end{verbatim}
+ The most important point to be noted here is that SQL is \emph{case insensitive}, which means SELECT and select have same meaning in SQL statements.\\
+ Some database systems require a semicolon at the end of each SQL statement.\\
+ Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.
+ 
+ 
+ \subsection*{{SQL Expressions}}
+ \addcontentsline{toc}{subsection}{SQL Expressions}
+ An expression is a combination of one or more values, operators and SQL functions that evaluate to a value. These SQL EXPRESSIONs are like formulae and they are written in query language. You can also use them to query the database for a specific set of data.\\
+ There are different types of SQL expressions, which are {-}
+ \begin{itemize}
+     \item Boolean
+     \item Numeric
+     \item Date
+ \end{itemize}
+ 
+ 
+ \subsection*{{Basic SQL Statements and Syntax}}
+ \addcontentsline{toc}{subsection}{Basic SQL Statements and Syntax}
+ 
+ \subsubsection*{{CREATE DATABASE}}
+ %\addcontentsline{toc}{subsubsection}{CREATE DATABASE}
+ The SQL \textbf{CREATE DATABASE} statement is used to create a new SQL database.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    CREATE DATABASE DatabaseName;
+ \end{lstlisting}
+ 
+ \subsubsection*{{DROP DATABASE}}
+ %\addcontentsline{toc}{subsubsection}{DROP DATABASE}
+ The SQL \textbf{DROP DATABASE} statement is used to drop an existing database in SQL schema.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    DROP DATABASE DatabaseName;
+ \end{lstlisting}
+
+ \subsubsection*{{SELECT/USE DATABASE}}
+ %\addcontentsline{toc}{subsubsection}{SELECT/USE DATABASE}
+ When you have multiple databases in your SQL Schema, then before starting your operation, you would need to select a database where all the operations would be performed.\\
+The SQL \textbf{USE} statement is used to select any existing database in the SQL schema.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    USE DatabaseName;
+ \end{lstlisting}
+ 
+ \subsubsection*{{CREATE TABLE}}
+ %\addcontentsline{toc}{subsubsection}{CREATE TABLE}
+ Creating a basic table involves naming the table and defining its columns and each column's data type.\\
+The SQL \textbf{CREATE TABLE} statement is used to create a new table.\\
+ Basic syntax: 
+ \begin{lstlisting}[language=SQL]
+    CREATE TABLE table_name(
+    CREATE TABLE table_name(
+       column1 datatype,
+       column2 datatype,
+       column3 datatype,
+       .....
+       columnN datatype,
+       PRIMARY KEY( one or more columns )
+    );
+ \end{lstlisting}
+ 
+ \subsubsection*{{DROP TABLE}}
+ %\addcontentsline{toc}{subsubsection}{DROP TABLE}
+ The SQL \textbf{DROP TABLE} statement is used to remove a table definition and all the data, indexes, triggers, constraints and permission specifications for that table.\\
+ \textbf{NOTE} : You should be very careful while using this command because once a table is deleted then all the information available in that table will also be lost forever.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    DROP TABLE table_name;
+ \end{lstlisting}
+ 
+ \subsubsection*{{INSERT Query}}
+ %\addcontentsline{toc}{subsubsection}{INSERT QUERY}
+ The SQL \textbf{INSERT INTO} Statement is used to add new rows of data to a table in the database.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    INSERT INTO TABLE_NAME (column1, column2, column3,...columnN)  
+    VALUES (value1, value2, value3,...valueN);
+ \end{lstlisting}
+ Here, column1, column2, column3,...columnN are the names of the columns in the table into which you want to insert the data.\\
+ You may not need to specify the column(s) name in the SQL query if you are adding values for all the columns of the table. But make sure the order of the values is in the same order as the columns in the table.
+ 
+ \subsubsection*{{SELECT Query}}
+ %\addcontentsline{toc}{subsubsection}{SELECT QUERY}
+ The SQL \textbf{SELECT} statement is used to fetch the data from a database table which returns this data in the form of a result table. These result tables are called result-sets.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT column1, column2, columnN FROM table_name;
+    
+    /*If you want to fetch all the fields available in the field, then you can use the following syntax.*/
+    
+    SELECT * FROM table_name;
+ \end{lstlisting}
+ 
+ \subsubsection*{{WHERE Clause}}
+ %\addcontentsline{toc}{subsubsection}{WHERE clause}
+ The SQL \textbf{WHERE} clause is used to specify a condition while fetching the data from a single table or by joining with multiple tables. If the given condition is satisfied, then only it returns a specific value from the table. You should use the WHERE clause to filter the records and fetching only the necessary records.\\
+ The WHERE clause is not only used in the SELECT statement, but it is also used in the UPDATE, DELETE statement, etc.\\
+ syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT column1, column2, columnN 
+    FROM table_name
+    WHERE [condition]
+ \end{lstlisting}
+ 
+ \subsubsection*{{AND and OR Clause}}
+ %\addcontentsline{toc}{subsubsection}{AND and OR clause}
+ The SQL \textbf{AND} \& \textbf{OR} operators are used to combine multiple conditions to narrow data in an SQL statement. These two operators are called as the conjunctive operators.\\
+ These operators provide a means to make multiple comparisons with different operators in the same SQL statement.\\
+ Syntax for \textbf{AND} clause: 
+ \begin{lstlisting}[language=SQL]
+    SELECT column1, column2, columnN 
+    FROM table_name
+    WHERE [condition1] AND [condition2]...AND [conditionN];
+ \end{lstlisting}
+ Syntax for \textbf{OR} clause:
+ \begin{lstlisting}[language=SQL]
+    SELECT column1, column2, columnN 
+    FROM table_name
+    WHERE [condition1] OR [condition2]...OR [conditionN]
+ \end{lstlisting}
+ 
+ \subsubsection*{{UPDATE Query}}
+ %\addcontentsline{toc}{subsubsection}{UPDATE Query}
+ The SQL \textbf{UPDATE} Query is used to modify the existing records in a table.\\
+ You can use the WHERE clause with the UPDATE query to update the selected rows, otherwise all the rows would be affected.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    UPDATE table_name
+    SET column1 = value1, column2 = value2...., columnN = valueN
+    WHERE [condition];
+ \end{lstlisting}
+ 
+ \subsubsection*{{DELETE Query}}
+ %\addcontentsline{toc}{subsubsection}{DELETE Query}
+ The SQL \textbf{DELETE} Query is used to delete the existing records from a table.\\
+ You can use the WHERE clause with a DELETE query to delete the selected rows, otherwise all the records would be deleted.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    DELETE FROM table_name
+    WHERE [condition];
+ \end{lstlisting}
+ 
+ \subsubsection*{{LIKE Clause}}
+ %\addcontentsline{toc}{subsubsection}{LIKE Clause}
+ The SQL \textbf{LIKE} clause is used to compare a value to similar values using wildcard operators. There are two wildcards used in conjunction with the LIKE operator.
+ \begin{description}
+     \item [The percent sign (\%)] {The percent sign represents zero, one or multiple characters}
+     \item [The underscore (\_)] {The underscore represents a single number or character}
+ \end{description}
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT FROM table_name
+    WHERE column LIKE '%XXXX%'
+
+    or
+
+    SELECT FROM table_name
+    WHERE column LIKE 'XXXX_'
+    
+    or
+
+    SELECT FROM table_name
+    WHERE column LIKE '_XXXX%'
+ \end{lstlisting}
+ 
+ \subsubsection*{{TOP Clause}}
+ %\addcontentsline{toc}{subsubsection}{TOP Clause}
+ The SQL \textbf{TOP} clause is used to fetch a TOP N number or X percent records from a table.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT TOP number|percent column_name(s)
+    FROM table_name
+    WHERE [condition]
+ \end{lstlisting}
+ 
+ \subsubsection*{{ORDER BY Clause}}
+ %\addcontentsline{toc}{subsubsection}{ORDER BY Clause}
+ The SQL \textbf{ORDER BY} clause is used to sort the data in ascending or descending order, based on one or more columns. Some databases sort the query results in an ascending order by default.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT column-list 
+    FROM table_name 
+    [WHERE condition] 
+    [ORDER BY column1, column2, .. columnN] [ASC | DESC];
+ \end{lstlisting}
+ 
+ \subsubsection*{{GROUP BY Clause}}
+ %\addcontentsline{toc}{subsubsection}{GROUP BY Clause}
+ The SQL \textbf{GROUP BY} clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT column1, column2
+    FROM table_name
+    WHERE [ conditions ]
+    GROUP BY column1, column2
+    ORDER BY column1, column2
+ \end{lstlisting}
+ 
+ \subsubsection*{{DISTINCT Keyword}}
+ %\addcontentsline{toc}{subsubsection}{DISTINCT Keyword}
+ The SQL \textbf{DISTINCT} keyword is used in conjunction with the SELECT statement to eliminate all the duplicate records and fetching only unique records.\\
+ Syntax: 
+ \begin{lstlisting}[language=SQL]
+    SELECT DISTINCT column1, column2,.....columnN 
+    FROM table_name
+    WHERE [condition]
+ \end{lstlisting}
+ 
+ 

@@ -1,0 +1,602 @@
+\section*{PROBABILITY AND STATISTICS}
+\addcontentsline{toc}{section}{Probability and Statistics}
+\fancyhead[R]{PROBABILITY AND STATISTICS}
+
+\subsection*{Probability}
+The extent to which an event is likely to occur, measured by the ratio of the favourable cases to the
+whole number of cases possible.\\
+Basically Probability is the measure of uncertainity.
+
+\subsection*{Sample space and Event}
+Any activity for which the outcome is uncertain can be thought of
+as an “experiment.”\\
+The set of all possible outcomes of an experiment is known as the
+sample space of the experiment and is denoted by $\Omega$.\\
+Any subset E of the sample space is known as an event.\\
+An event is a set of possible outcomes of the experiment.
+
+\subsection*{Baye's Theorem}
+Bayes Theorem provides a principled way for calculating a conditional probability.\\
+$Assume\ that\ A_1,A_2,...A_m\ are\ events\ such\ that$
+\begin{itemize}
+    \item $A_1 \cup A_2 \cup ...\cup A_m = \Omega $
+    \item $A_i \cap A_j = \phi \ (pairwise disjoint)\ \forall i \neq j = 1,2,...m$
+    \item $P(A_i) > 0 \ for \ all \ i \ and \ B \ is \ another \ event \ than \ A, \ then$
+\end{itemize}
+\[
+P(A_i|B) = \frac{P(B|A_j)P(A_j)}{\sum_{i=1}^{m}P(B|A_i)P(A_i)}
+\]
+is known as Bayes' Formula\\
+$P(A_i) : Prior\ probabilities$\\
+$P(A_i|B) : Posterior\ probabilities$\\
+$P(B|A_i) : Model\ probabilities$
+
+\subsection*{Independent Events}
+\textbf{Definition}: Two random events A and B are called (stochastically)
+independent If P(AB) = P(A) P(B).\\
+i.e. if the probability of simultaneous occurrence of both events A
+and B is the product of the individual probabilities of occurrence of A
+and B.
+
+\subsection*{Need of Random Variable}
+In any random experiment, we are interested in the value of some
+numerical quantity determined by the result.\\
+We are not interested in all the details of the experiments.\\
+These quantities of interest that are determined by the result of the
+experiment are known as random variables.
+
+\subsection*{Random Variable}
+Let $\Omega$ represent the sample space of a random experiment, and
+let R be the set of real numbers.\\
+A random variable is a function X which assigns to each element
+$\omega \in \Omega$ one and only one number
+\[ X(\omega) = x, x \in R,\ i.e.\ X : \Omega \rightarrow R \]
+
+\subsection*{Probability Density Function(PDF) for Continuous Random Variable}
+For a function f(X) to be a probability density function (PDF) of a
+continuous random variable X, it needs to satisfy the following
+conditions:
+\begin{enumerate}
+    \item f(X) $\leq 0 \forall x \in R$ 
+    \item $\int_{-\infty}^{\infty}f(x)\ dx \ = \ 1$
+\end{enumerate}
+Let X be a random variable with CDF F(x).\\
+If $x_1\ <\ x_2$ where $x_1\ and\ x_2$ are known constants,
+\[ P(x_1 \leq X \leq x_2) = F(x_2)\ -\ F(x_2)\ = x_2\ -\ x_1\ =\ \int_{x_1}^{x_2}f(x)\ dx\]
+
+
+\subsection*{Cumulative Distribution Function(CDF)}
+The cumulative distribution function, or more simply the distribution
+function, F of the random variable X is defined for any real number x
+by
+\[F(x) = P(X \leq x)\]
+That is, F(x) is the probability that the random variable X takes on a
+value that is less than or equal to x.
+
+\subsection*{CDF of Continuous Random Variables}
+A random variable X is said to be continuous if there is a function
+f(x) such that for all x $\in$ R
+\[ F(x)\ =\ \int_{-\infty}^{\infty}f(t)\ dt \]
+holds.
+\begin{itemize}
+    \item F(x) is the CDF of X, and
+    \item f(x) is the PDF of X.
+\end{itemize}
+
+\subsection*{CDF of Discrete Random Variable}
+The cumulative distribution function CDF of a discrete random
+variable as
+\[ F(X)\ =\ \sum_{i=1}^{k} I_{x_i \leq x}p_i \]
+where I is an indicator function defined as
+\begin{equation}
+I_{x_i \leq x} = 
+\begin{cases}
+&1\ if\ x_i \leq x\\
+&0\ otherwise.
+\end{cases}
+\end{equation}
+The CDF of a discrete variable is always a step function.
+
+
+
+\subsection*{Expectation of a Continuous Random Variable}
+Let X be a continuous random variable having the probability
+density function f (x).\\
+Suppose g(X) is a real valued function of X.\\
+Obviously g(X) will also be a random variable.\\
+Then expectation of g(X) is defined as is defined as
+\[ E[g(X)]\ =\ \int_{-\infty}^{\infty} g(x)f(x)\ dx \]
+provided with \[ \int |g(x)|f(x)\ dx < \infty \]
+
+\subsection*{Expectation of a Discrete Random Variable}
+Let X be a discrete random variable having the probability mass
+function P(X = $x_i$) = $p_i$ .
+Suppose g(X) is a real valued function of X.
+Obviously g(X) will also be a random variable.
+Thus X takes the values $x_1, x_2,...,x_k$ with respective
+probabilities $p_1, p_2, . . ., p_k $
+Then expectation of g(X) exists and is defined as
+\[ E[g(X)]\ =\ \sum_{i=1}^{\infty} g(x_i)P(X\ =\ x_i)\ =\ \sum_{i=1}^{\infty} g(x_i)p_i \]
+provided \[ \sum_{i=1}^{\infty} |g(x_i)|p_i < \infty \]
+
+\subsection*{Moments}
+Moments are used to describe different characteristics and
+features of a probability distribution, viz., central tendency,
+disperson, symmetry and peakedness (hump) of probability curve.
+\begin{enumerate}
+    \item g(X) = $X^r$ where r is nonnegative integer,\\
+    then E[g(X)] = E($X^r$) = $\mu_r^`$\\
+    $\mu_r^`$ is called as the $r^{th}$ moment of X about origin.
+    \item g(X) = $(X - A)^r$ where r is non{-}negative integer,\\
+    then E[g(X)] = E$(X - A)^r$\\
+    is called as $r^{th}$ moment of X about the point "A".
+\end{enumerate}
+
+\subsection*{Central Moment}
+The moments of a variable X about the arithmetic mean $\bar x$ are
+called central moments.\\
+For  E[g(X)] = E$(X - A)^r$\\
+If A = E(X) : Mean \\
+then E$(X - A)^r$ = $E[X\ -\ E(X)]^r$ = $\mu_r$\\
+$\mu_r$ is called as the $r^{th}$ central moment of X.
+
+\subsection*{Quantiles}
+We define quantiles in terms of the distribution function.\\
+The value $x_p$ for which the cumulative distribution function is\\
+F($x_p$) = p (0 $\leq$ p $\leq$ 1)\\
+is called the p‐quantile.\\
+$x_p$ is the value which divides the CDF into two parts:
+\begin{itemize}
+    \item the probability of observing a value left of $x_p$ is p
+    \item the probability of observing a value right of $x_p$ is 1 - p.
+\end{itemize}
+
+\subsection*{Tschebyschev's Inequality}
+If we do not know the distribution of a random variable X, we can still
+make statements about the probability using Tschebyschev’s
+inequality that X takes values in a certain interval (which has to be
+symmetric around the expectation $\mu$) if the mean $\mu$ and the variance
+$\sigma^2$ of X are known.\\
+Let X be a random variable with E(X) = $\mu$ and Var(X) = $\sigma^2$. It holds that \[ P(|X\ -\ \mu| \geq \ c)\ \leq \ \frac{Var(X)}{c^2} \]
+This is equivalent to \[ P(|X\ -\ \mu|\ <\ c)\ \leq \ 1\ -\ \frac{Var(X)}{c^2} \]
+
+\subsection*{Need of Probability Distributions}
+Probability distribution functions have
+special properties and describe how probabilities are distributed
+under different conditions.\\
+The form of such functions depends upon the nature and complexity
+of the phenomenon under consideration.\\
+We have probability distributions for discrete and continuous
+random variables.
+
+\subsection*{Degenerate Distribution}
+A random variable X has a degenerate distribution at c, if c is the only
+possible outcome.\\
+The probability mass function (PMF) of X is given by
+\begin{equation}
+P(X = x) =
+\begin{cases}
+& $1\ if\ x\ =\ c$\\
+& 0\ if\ x\ \neq \ c
+\end{cases}
+\end{equation}
+
+The CDF in such case is given by
+\begin{equation}
+F(X) = 
+\begin{cases}
+&$0\ if\ x\ <\ c$\\
+&1\ if\ x\ \geq \ c.
+\end{cases}
+\end{equation}
+Further, The mean (expectation) and variance of X are \textbf{E(X) = c}
+and \textbf{Var(X) = 0}.\\
+The degenerate distribution indicates that there is only one possible
+fixed outcome, and therefore, no randomness is involved.
+
+\subsection*{Discrete Uniform Distribution}
+Consider a situation where the probability of all the outcomes are
+the same.\\
+In such situations, the discrete uniform distribution can be used to
+describe the probabilities and the phenomenon.\\
+The discrete uniform distribution assumes that all possible outcomes
+have equal probability of occurrence.
+\subsubsection*{PMF}
+A discrete random variable X with k possible outcomes $x_1, x_2, . . . ,x_k$
+is said to follow a discrete uniform distribution if the probability
+mass function (PMF) of X is given by
+\[ P(X = x_i) = \frac{1}{k} \ \forall \ i\ =\ 1,2,...k.\]
+\subsubsection*{Mean and Variance}
+If the outcomes are the natural numbers $x_i$ = i (i = 1, 2, . . . , k), then
+the mean and variance of X are as follows:
+\[ E(X)\ =\ \frac{k+1}{2} \]
+\[ Var(X)\ =\ \frac{k^2\ -\ 1}{2} \]
+
+\subsection*{Bernoulli Distribution}
+A Bernoulli experiment is a random experiment, the outcome of
+which can be classified in but one of two mutually exclusive and
+exhaustive ways, e.g. success or failure.\\
+If we let X = 1 when the outcome is a success and X = 0 when it is a
+failure, then a random variable X has a Bernoulli distribution if the
+probability mass function (PMF) of X is given by
+\begin{equation}
+P(X\ =\ x)\ = 
+    \begin{cases}
+    & p\; if\ x\ =\ 1\\
+    & 1\ -\ p\; if\ x\ =\ 0.
+    \end{cases}
+\end{equation}
+The CDF in such case is given by
+\begin{equation}
+F(X)\ =
+    \begin{cases}
+    & 0\; if\ x\ <\ 0\\
+    &1\ -\ p\; if\ 0\ \leq \ x \ \leq\ 1 \\
+    &1\; if\ x\ \leq\ 1.
+    \end{cases}
+\end{equation}
+The mean(expectation) and variance of a Bernoulli random variable are calculated as \textbf{E(X) = p} and \textbf{Var(X) = p(1 – p)}.
+
+\subsection*{Binomial Distribution}
+Consider n independent trials or repetitions of a Bernoulli
+experiment with probability of success p in each trial so that p
+remains constant in each trial.\\
+In each trial or repetition, we may observe either A or $\bar{A}$.\\
+At the end of the experiment, we have thus observed A between 0
+and n times.\\
+Suppose we are interested in the probability of A occurring k times,
+then the binomial distribution is useful.\\
+A discrete random variable X is said to follow a binomial distribution
+with parameters n and p if its PMF is given by
+\begin{equation}
+P(X = k) =
+    \begin{cases}
+    & \binom{n}{k}p^k\ q^{n-k}\ if\ k\ =\ 0,1,...n\\
+    & 0\ otherwise.
+    \end{cases}
+\end{equation}
+We also write X ~ B(n,p).\\
+The mean and variance of a binomial random variable X are given by \textbf{E(X) = np}, \textbf{Var(X) = np(1 - p)}.\\
+\textbf{Remark}: A Bernoulli random variable is therefore B(1, p) distributed.
+
+\subsection*{Poisson Distribution}
+A discrete random variable X is said to follow a Poisson distribution
+with parameter $\lambda$ > 0 if its PMF is given by
+\[ P(X = x)\ =\ \frac{\lambda^x\ exp(-\lambda)}{x!}\   x\ =\ 0,1,2,..\]
+We also write X ~ P($\lambda$).\\
+The mean and variance of a Poisson random variable are identical:
+E(X) = Var(X) = $\lambda$
+
+\subsection*{Geometric Distribution}
+The geometric distribution can be used to determine the probability
+that the event of interest happens at the $k^{th}$ trial for the first time.\\
+A discrete random variable X is said to follow a geometric distribution
+with parameter p if its PMF is given by
+\[ P(X = k)\ =\ p(1-p)^{k-1},\ k\ =\ 1,2,3,...\]
+The mean (expectation) and variance are given by
+\[ E(X)\ =\ \frac{1}{p}\]
+\[ Var(X)\ =\ \frac{1-p}{p^2} \] 
+
+\subsection*{Continuous Uniform Distribution}
+A continuous random variable X is said to follow a (continuous)
+uniform distribution in the interval [a, b], if its probability density
+function (PDF) is given by
+\begin{equation}
+f_x(x) \equiv f(x) =
+\begin{cases}
+& \frac{1}{b-a}\ if\ a\ \leq\ x\ \leq\ b,\ (a<b)\\
+& 0\ otherwise.
+\end{cases}
+\end{equation}
+We also write X ~ U(a,b).\\
+The mean and variance of a X ~ U(a,b) are given by
+\[ E(X)\ =\ \frac{a+b}{2}\]
+\[ Var(X)\ =\ \frac{(b-a)^2}{12} \] 
+
+\subsection*{Normal Distribution}
+The normal distribution is also often called a \textbf{Gaussian distribution}.\\
+The most widely used model for the distribution of a random
+variable is a normal distribution.\\
+A random variable X is said to follow a normal distribution with
+parameters $\mu$ and $\sigma^2$ if its PDF is given by
+\begin{equation}
+    f(x;\mu,\sigma^2)\ \equiv\ f(x)\ =\ \frac{1}{\sigma\sqrt{2\pi}}exp(\frac{-(x-\mu)^2}{2\sigma^2}) \\
+    -\infty\ <\ x\ <\ \infty;\ -\infty\ <\ \mu\ <\ \infty;\ \sigma^2\ >\ 0.
+\end{equation}
+We write X ~ N($\mu$,$\sigma^2$).\\
+The mean and variance of X are \textbf{E(X) = $\mu$} and \textbf{Var(X) = $\sigma^2$} respectively.\\
+The value of E(X) = $\mu$ determines the center of the probability density function and the value of Var(X) = $\sigma^2$ determines the width.
+\subsubsection*{Standard Normal Distribution}
+If $\mu$ = 0 and $\sigma^2$ = 1, then X is said to follow a standard normal distribution.\\
+We write X ~ N(0,1).
+
+\subsection*{Exponential Distribution}
+The exponential distribution is useful in many situations, for example
+when one is interested in the waiting time, or lifetime, until an event
+of interest occurs.\\
+A continuous random variable X is said to follow an exponential
+distribution with parameter $\lambda$ > 0, if its probability density function
+(PDF) is given by
+\begin{equation}
+    f_x(x)\ \equiv\ f(x)\ =\
+    \begin{cases}
+    & \lambda exp(-\lambda x),\ \ if\ 0\ \leq\ x\ \leq\ \infty\\
+    & 0\ \ otherwise
+    \end{cases}
+\end{equation}
+We also write X ~ Exp($\lambda$).\\
+The mean and variance of X are 
+\[ E(X)\ =\ \frac{1}{\lambda}\]
+\[ Var(X)\ =\ \frac{1}{\lambda^2}\]
+respectively.\\
+The CDF of exponential distribution is given as
+\begin{equation}
+    F(x)\ =\
+    \begin{cases}
+    & 1\ -\ exp(-\lambda x),\ \ if\ 0\ \leq\ x\ \leq\ \infty\\
+    & 0\ \ otherwise
+    \end{cases}
+\end{equation}
+
+\subsection*{Joint Probability Distributions}
+If X and Y are discrete random variables, the joint probability
+distribution of X and Y is a description of the set of points (x, y) in the
+range of (X, Y) along with the probability of each point.\\
+The joint probability distribution of two random variables is referred
+to as the bivariate probability distribution or bivariate distribution of
+the random variables.
+\subsubsection*{Discrete Random Variables}
+The joint probability mass function of the discrete random variables
+X and Y, denoted as $p_{XY}$(x, y), satisfies
+\begin{itemize}
+    \item $p_{XY}$(x, y) $\geq$ 0
+    \item $\sum_{x}\sum_{y}p_{XY}$(x, y) = 1
+    \item p(x,y) = P(X=x, Y=y)
+\end{itemize}
+\subsubsection*{Continuous Random Variables}
+The joint probability distribution of two continuous random
+variables X and Y can be specified by providing a method for
+calculating the probability that X and Y assume a value in any region
+R of two‐dimensional space.\\
+Analogous to the probability density function of a single continuous
+random variable, a joint probability density function can be defined
+over two‐dimensional space.
+\subsection*{Joint Cumulative Distribution Function}
+A bivariate random variable (X, Y) is continuous if there is a function
+$f_{XY}$(x, y) such that
+\[ F_{XY}(x,y)\ =\ P(X\leq x,\ Y\leq y)\ =\ \int_{-\infty}^{y}\int_{-\infty}^{x}f_{XY}(x,y)\ dxdy \]
+holds.\\
+The function $F_XY$(x, y) is the joint cumulative distribution function of
+X and Y.
+
+\subsection*{Covariance}
+The covariance between X and Y is defined as\\
+Cov(X, Y) = E[(X - E(X))(Y - E(Y))] = E(XY) - E(X) E(Y).\\
+This is based on Product and first moments.\\
+The covariance is
+\begin{itemize}
+    \item positive if, on average, larger values of X correspond to larger
+values of Y
+    \item it is negative if, on average, greater values of X correspond to
+smaller values of Y.
+\end{itemize}
+If the random variables $X_1$ and $X_2$ are bivariate, the covariance
+matrix is defined as
+\[
+Cov\binom{X_1}{X_2}\ =\ \binom{Var(X_1)\ \ \ \ Cov(X_1,X_2)}{Cov(X_1,X_2)\ \ \ Var(X_2)}
+\]
+Also Note that Cov($X_1$,$X_2$) = Cov($X_2$,$X_1$)
+
+\subsection*{Bivariate Normal Distribution}
+An extension of a normal distribution to two random variables is
+bivariate normal distribution.\\
+An extension of a normal distribution to more than two random
+variables is multivariate normal distribution.\\
+The probability density function of a bivariate normal distribution is
+\[
+f_{XY}(x,y,\sigma_x,\sigma_y,\mu_x,\mu_y,\rho)\ =\]
+\[
+\frac{1}{2\pi\sigma_x\sigma_y\sqrt{1-p^2}}exp\Bigg\{-\frac{1}{2(1-p^2)}\left[\frac{(x-\mu_x)^2}{\sigma_x^2}\ +\ \frac{(y-\mu_y)^2}{\sigma_y^2}\ -\ \frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y}\right]\Bigg\}
+\]
+\[
+-\infty\ <\ x\ <\ \infty,\ -\infty\ <\ y\ <\ \infty,\ \sigma_x\ >\ 0,\ \sigma_y\ >\ 0, -1\ <\ \rho <\ 1.
+\]
+
+\subsection*{Chi square($\chi^2$) Distribution}
+Let $Z_1, Z_2,..., Z_n$ be n independent and identically N(0,1){-}distributed
+random variables. The sum of their squares, $\sum_{i=1}^{n}Z_i^2$ is then $\chi^2$ distributed with n degrees of freedom and is denoted as $\chi_n^2$\\
+A random variable X has a $\chi_n-$ distribution if the PDF of X is given as
+\[
+f(x)\ =\ 
+\begin{cases}
+& \frac{x^{\frac{n-2}{2}}exp(\frac{-x}{2})}{2^{\frac{n}{2}}\Gamma\binom{n}{2}},\ x\ >\ 0 \\
+& 0\ otherwise
+\end{cases}
+\]
+We write X ~ $\chi_n^2$.\\
+The mean and variance of a random variable $\chi_n^2$ distribution is \\
+E(X) = n\\
+Var(X) = 2n   respectively.\\
+The $\chi_n^2$ distribution is not symmetric.\\
+A $\chi_n^2$ distributed random variable can only realize values greater than
+or equal to zero.
+
+\subsection*{t {-} Distribution}
+Let X and Y be two independent random variables where X ~ N(0,1)
+and Y ~ $\chi_n^2$. Then the ratio
+\[ \frac{X}{\sqrt{\frac{Y}{n}}}\ \simeq\ t_n \]
+follows a t \- distribution (Student's t\-distribution) with degree n of freedom. This is central t\-distribution.\\
+A random variable X has a t{-}distribution if the PDF of X is given as
+\[
+f(x)\ =\ \frac{\Gamma\frac{n+1}{2}}{\sqrt{n\pi}\Gamma\binom{n}{2}}\Bigg(1\ +\ \frac{x^2}{n}\Bigg)^\frac{-n-1}{2}\ \ ; -\infty\ <\ x\ <\ \infty.
+\]
+The mean and variance of a random variable X ~ $t_n$ distribution is \\
+E(X) = 0, n > 1\\
+Var(X) = $\frac{n}{n-2}$, n > 2  respectively.\\
+The t\-distribution is a symmetric distribution.
+
+\subsection*{F {-} Distribution}
+Let X and Y be two independent random variables where X ` $\chi_m^2$
+and Y ~ $\chi_n^2$ . Then the ratio
+\[ \frac{\frac{X}{m}}{\frac{Y}{n}}\ \simeq\ F_{m,n} \]
+follows the Fisher F{-}distribution with (m, n) degrees of freedom. We
+write X ~ $F_{m,n}$.\\
+The mean and variance of a random variable X ~ $F_{m,n}$ distribution is\\
+\[E(X)\ =\ \frac{n}{n-2},\ n\ >\ 2\]
+\[Var(X)\ =\ \frac{2n^2(m+n-2)}{m(n-2)^2(n-4)},\ n\ >\ 4\]
+respectively.\\
+The F random variable is non\-negative, and the distribution is skewed to the right.\\
+The “degrees of freedom” specify the shape of the distribution.
+
+\subsection*{Weak Law of Large Numbers}
+A positive integer n can be determined such that if a random sample
+of size n or larger is taken from a population with the density f(x)
+(with E(X) = $\mu$), the probability can be made to be as close to 1 as
+desired that the sample mean $\bar{X}$ will deviate from $\mu$ by less than any arbitrarily specified small quantity.
+If n is any integer greater than $\frac{\sigma^2}{\epsilon\delta^2}$, then
+\[ P[|\bar{X_n}\ -\ \mu|\ <\ \epsilon]\ \geq\ 1\ -\ \delta \]
+where $\epsilon$ > 0 and 0 < $\delta$ < 1.
+
+\subsection*{Central Limit Theorem}
+The central limit theorem tells that the sum of
+a large number of independent random variables has approximately
+a normal distribution.\\
+It provides a simple method for computing approximate probabilities
+for sums of independent random variables
+\subsubsection*{Theorem}
+Let $X_1, X_2,..., X_n$ be a sequence of independent and identically
+distributed random variables each having mean $\mu$ and variance $\sigma^2$ .\\
+Then for n large, the distribution of $X_1\ +\ X_2\ +\ ,..., X_n$ is approximately
+normal with mean $n\mu$ and variance $n\sigma^2$.\\
+It follows from the central limit theorem that
+\[ \frac{X_1\ +\ X_2\ +\ ,..., X_n\ -\ n\mu}{\sigma\sqrt{n}} \]
+is approximately normal with mean 0 and variance 1, i.e. Standard
+normal distribution N(0, 1).
+
+\subsubsection*{Continuity Correction}
+When we approximate the probabilities for discrete distributions,
+we incorporate the continuity correction also.\\
+Let $X_1\ +\ X_2\ +\ ,..., X_n$ be a sequence of independent and identically distributed discrete random variables and let
+\[ Y\ =\ X_1\ +\ X_2\ +\ ,..., X_n\]
+Suppose that we are interested in finding P(A) = P(l$\leq$Y$\leq$u) using the CLT, where l and u are integers. Since Y is an integer{-}valued random variable, we can write
+\[
+P(A)\ =\ P\Bigg(l\ -\ \frac{1}{2}\ \leq\ Y\ \leq\ u\ +\ \frac{1}{2}\Bigg)
+\]
+It turns out that the above expression sometimes provides a better approximation for P(A) when applying the CLT. This is called the continuity correction and it is particularly useful when Y is binomial.
+
+\subsection*{Sample Mean Distribution}
+Let $X_1\ +\ X_2\ +\ ,..., X_n$ be a sample from a population having mean $\mu$ and variance $\sigma^2$. The central limit theorem can be used to approximate the distribution of the sample mean
+$\bar{X_n}\ =\ \frac{1}{n}\sum_{i=1}^{n}X_i$.\\
+Since E($\bar{X_n}$) = $\mu$, Var($\bar{X_n}$) = $\frac{\sigma^2}{n}$ and $\bar{X_n}$ is based on a linear combination of normally distributed random variables, so when sample size n is large, then
+\[ \frac{\bar{X_n}\ -\ \mu}{\frac{\sigma}{\sqrt{n}}} \]
+has approx. a standard normal distribution N(0,1).
+
+\subsection*{Statistical Inference}
+After completing the experiment, data is described and
+summarized with an aim to draw a statistical conclusion using the
+tools of inferential statistics.\\
+A careful description and presentation of the data enable us to
+infer an appropriate probability model for a given data set which
+can be verified by using the additional data.\\
+The tools of statistical inference lay the foundation of the
+formulation of a probability model to describe the data.
+
+\subsection*{Unbiased Estimators}
+An estimator should be “close” in some sense to the true value of
+the unknown parameter.\\
+Formally, we say that $\hat{\theta}$ is an unbiased estimator of $\theta$ if the expected value of $\hat{\theta}$ is equal to $\theta$.\\
+This is equivalent to saying that the mean of the probability
+distribution of (or the mean of the sampling distribution of) $\hat{\theta}$ is equal to $\theta$.
+
+\subsection*{Efficiency of Estimators}
+Let the parametric space of $\theta$ be $\Theta$, i.e. $\theta \ \in \  \Theta$.\\
+Let $\hat{\theta_1}$ and $\hat{\theta_2}$ be the unbiased estimators of ${\theta}$.\\
+Then $\hat{\theta_1}$ is said to be more efficient than $\hat{\theta_2}$ under the variance criterion for estimating $\theta$ when 
+\[
+Var(\hat{\theta_1})\ \leq\ Var(\hat{\theta_2})\ \forall\ \theta\ \in \ \Theta\]
+and
+\[
+Var(\hat{\theta_1})\ <\ Var(\hat{\theta_2})\ for\ at\ least\ one \theta\ \in \ \Theta\]
+
+\subsection*{Cramer{-}Rao Lower Bound(CRLB)}
+Let $X_1,X_2,...,X_n$ is a random sample from a distribution with f(x;$\theta$) $\in$ $\Theta$ and g($\theta$) is to be estimated.\\
+CRLB provides a lower bound for the variance of any unbaised estimator of g($\theta$).
+
+\subsection*{Consistency of Estimators}
+For a good estimator, as the sample size increases, the values of the
+estimator should get closer to the parameter being estimated.\\
+This property of estimators is referred to as consistency.
+
+\subsection*{Sufficiency of Estimators}
+\subsubsection*{Definition}
+Let $X_1,X_2,...,X_n$ be a random sample from a
+probability density function (or probability mass function) $f_x(x,\theta)$.\\
+A statistic T is said to be sufficient for $\theta$ if the conditional
+distribution of $X_1,X_2,...,X_n$ given T = t is independent of $\theta$.\\
+\textbf{Note:} This method does not give a constructive way to find out a sufficient statistic. It can only verify if a statistic is sufficient or not.
+\subsubsection*{Neyman{-}Fisher Factorization Theorem}
+Let $X_1,X_2,...,X_n$ be a random sample from a
+probability density function (or probability mass function) $f_x(x,\theta)$.\\
+A statistic T = $T(x_1,x_2,...,x_n)$ is said to be sufficient for $\theta$ iff the joint density of $X_1,X_2,...,X_n$ can be factorized as 
+\[ f(x_1,x_2,...,x_n;\theta)\ =\ g(t,\theta)h(x_1,x_2,...,x_n)\]
+where $h(x_1,x_2,...,x_n)$ is nonnegative and does not involve $\theta$ and $g(t,\theta)$ is a nonnegative function of $\theta$ which depends on $x_1,x_2,...,x_n$ only through t, which is a particular value of T.\\
+This theorem holds for discrete random variables too.
+\subsubsection*{Jointly sufficient}
+If $\b{\theta}\ =\ (\theta_1,\theta_2,...,\theta_q)`$ then T = ($T_1,T_2,...,T_k$) k not necessarily equal to q) is jointly sufficient for \b${\theta}$ if
+\[ f(x_1,x_2,...,x_n;\b{\theta})\ =\ g(t,\b{\theta})h(x_1,x_2,...,x_n)\]
+where $h(x_1,x_2,...,x_n)$ is nonnegative and does not involve \b${\theta}$ and $g(t,\theta)$ is a nonnegative function of \b${\theta}$ which depends on $x_1,x_2,...,x_n$ only through t, which is a particular value of T.
+\subsubsection*{Minimal sufficient}
+When we ask for sufficient statistics, we generally mean the minimal
+sufficient statistics.\\
+(Otherwise the whole sample itself can also be sufficient.)\\
+By Neyman{-}Fisher Factorization Theorem, the statistics which we
+obtain is, \underline{in general}, the minimal sufficient statistic
+
+\subsection*{Method of Moments Estimators}
+Let $X_1,X_2,...X_n$ be a random sample from either a probability mass
+function or a probability density function with p unknown
+parameters $\theta_1,\theta_2,...,\theta_p$.\\
+The moment estimators are found by
+\begin{itemize}
+    \item equating the first p population moments to the first p sample
+moments and
+    \item solving the resulting equations for the unknown parameters.
+\end{itemize}
+The resultant estimators are called as Method of Moments (MoM)
+estimators.
+
+\subsection*{Method of Maximum Likelihood}
+The maximum likelihood estimator (MLE) of $\theta$ is the value of $\theta$ that maximizes the likelihood function $L(\theta;x_1,x_2,...,x_n).$\\
+In the discrete case, the maximum likelihood estimator is an estimator
+that maximizes the probability of occurrence of the sample values\\
+P$(X_1\ =\ x_1, X_2\ =\ x_2,...,X_n\ =\ x_n)$\\
+$\hat{theta}$ is the MLE of $\theta$ if $L(\hat{\theta};x_1,x_2,...,x_n).$ $\geq$ $L(\theta;x_1,x_2,...,x_n).$ $\forall \ \theta \ \in \ \Theta$.
+
+\subsection*{Rao Blackwell Theorem}
+Rao Blackwell Theorem helps in obtaining a minimum variance
+unbiased estimator of a parameter.\\
+Let $X_1,X_2,...X_n$ is a random sample from a distribution with $f(x;\theta),\ \theta\ \in\ \Theta$. Suppose $\delta(X)$ is an unbiased estimator of $g(\theta)$ and T is a sufficient statistic for $\theta$. Define
+\[ \eta(T)\ =\ E(\delta(X)|T\ =\ t] \]
+Since T is sufficient statistic, it is independent of $\theta$.\\
+So $\eta(T)$ is a statistic.\\
+$\eta(T)$: Rao Blackwellised version of $\delta(X)$.
+
+\subsection*{Confidence Intervals}
+An interval estimate for a population parameter is called a
+confidence interval.\\
+The length of the interval reflects the uncertainty about $\mu$.
+\subsubsection*{Pivotal Quantity Method to Derive a Confidence Interval:}
+A general method for finding a confidence interval for an
+unknown parameter is as follows:
+\begin{enumerate}
+    \item Let $X_1,X_2,...X_n$ be a random sample of n observations.
+    \item Suppose we can find a statistic g($X_1,X_2,...X_n; \theta$) such that
+    \begin{itemize}
+        \item g($X_1,X_2,...X_n; \theta$) depends on both the sample and $\theta$ but
+        \item the probability distribution of g($X_1,X_2,...X_n; \theta$) does not depend on $\theta or any other unknown parameter.$
+    \end{itemize}
+\end{enumerate}
+Such g($X_1,X_2,...X_n; \theta$) is called as pivotal quantity .\\
+Now one can compute confidence intervals of
+the form $\hat{\theta_L}$ and $\hat{\theta_U}$ so that 
+\[ P_\theta[\hat{\theta_L}(X)\ \leq\ \theta\ \leq\ \hat{\theta_U}(X)]\ \geq\ 1\ -\ \alpha \]
